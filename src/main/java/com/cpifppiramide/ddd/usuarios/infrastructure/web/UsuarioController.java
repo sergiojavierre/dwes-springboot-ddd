@@ -33,7 +33,7 @@ public class UsuarioController {
 
         String alias = "demo";
         String password = "123";
-        Usuario usuario = this.usuarioUseCases.login(alias,password);
+        Usuario usuario = this.usuarioUseCases.login(new Usuario(alias,password));
         System.out.println(usuario);
         return "index";
     }

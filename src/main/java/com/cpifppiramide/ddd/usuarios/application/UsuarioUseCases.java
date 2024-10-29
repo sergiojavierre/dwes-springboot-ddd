@@ -17,8 +17,8 @@ public class UsuarioUseCases {
         this.usuarioRepository.registro(aGuardar);
     }
 
-    public Usuario login(String alias, String password){
-        String cifrada = password.toUpperCase();
-        return this.usuarioRepository.login(alias, cifrada);
+    public Usuario login(Usuario usuario){
+        String cifrada = usuario.getPassword().toUpperCase();
+        return this.usuarioRepository.login(usuario.getAlias(), cifrada);
     }
 }
